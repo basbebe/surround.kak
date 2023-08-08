@@ -82,9 +82,9 @@ define-command -override -hidden surround-tag -docstring 'surround tag' %{
 define-command -override -hidden surround-add -params 2 %{
   evaluate-commands -save-regs '"' %{
     set-register '"' %arg{1}
-    execute-keys P
+    execute-keys -draft P
     set-register '"' %arg{2}
-    execute-keys p
+    execute-keys -draft p
   }
 }
 
